@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bundled.css">
+    <link rel="stylesheet" href="jquery-confirm.css">
+    <script src="bundled.js"></script>
+    <script src="jquery-confirm.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, veniam. Cupiditate, quia. Officia
+            excepturi veniam delectus officiis aliquid ipsum porro. Velit recusandae repellat nostrum saepe ea, natus
+            incidunt provident fugiat aut cum debitis quaerat facilis, reiciendis, vitae dolore minus ipsam at iste!
+            Corporis fugiat iure consequatur recusandae culpa veniam? Accusamus maiores similique cum? Quaerat quia
+            mollitia illum libero vitae soluta voluptatem, recusandae at dicta sunt. Debitis doloremque libero officiis
+            enim explicabo repellendus officia voluptatum fuga expedita beatae! Maiores omnis molestias vitae, vero ea
+            et esse enim! Quisquam mollitia neque cumque, necessitatibus ipsa consequatur similique omnis cum inventore
+            nihil temporibus commodi voluptatum quas perferendis repellendus laborum dolorum ratione reiciendis
+            perspiciatis labore a! Commodi nisi iusto consectetur maxime esse maiores culpa aliquam cumque ipsum!</p>
+            <button class="btn btn-primary" onclick="Test()">Click</button>
+    </div>
+
+</body>
+<script>
+    function Test() {
+        $.confirm({
+            draggable:true,
+            closeIcon:true,
+            title: 'Encountered an error!',
+            content: 'Something went downhill, this may be serious',
+            type: 'green',
+            typeAnimated: true,
+            buttons: {
+                tryAgain: {
+                    text: 'Try again',
+                    btnClass: 'btn-green',
+                    action: function () {
+                        alert("done")
+                    }
+                },
+                close: function () {
+                }
+            }
+        });
+    }
+</script>
+
+</html>
